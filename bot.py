@@ -112,10 +112,16 @@ async def handle_fun_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
 import time
 
+# Import keep_alive
+from keep_alive import keep_alive
+
 if __name__ == '__main__':
     if not config.TELEGRAM_BOT_TOKEN:
         print("Error: TELEGRAM_BOT_TOKEN not found in environment variables.")
         exit(1)
+    
+    # Start the keep-alive server
+    keep_alive()
         
     application = ApplicationBuilder().token(config.TELEGRAM_BOT_TOKEN).build()
     
