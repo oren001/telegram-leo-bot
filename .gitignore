@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+user_photo_*.jpg
+debug_models.py
+list_models.py
